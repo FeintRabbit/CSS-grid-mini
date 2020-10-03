@@ -151,3 +151,53 @@ Hero
     font-size: 4rem;
   }
 }
+
+/* 
+==================
+Cards
+==================
+*/
+
+.title {
+  text-align: center;
+}
+.cards {
+  padding: 4rem 0;
+}
+
+.cards-center {
+  width: 80vw;
+  max-width: 1170px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
+  column-gap: 2rem;
+}
+/* 
+calc the min width
+
+max width for 3 columns = 1170px
+gap = 2rem = 32px, 2 gaps at max (3 columns) = 64px
+min width = (max width - (gap * columns-1)) / columns
+= 368px
+*/
+
+.card {
+  border: 1px solid var(--darkGrey);
+  margin-bottom: 3rem;
+  /* display: grid;
+  grid-template-rows: auto 1fr auto; */
+}
+
+.card-info {
+  padding: 1rem;
+}
+
+.card-footer {
+  background: var(--darkGrey);
+  color: var(--primaryColor);
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
