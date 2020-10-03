@@ -64,6 +64,12 @@ p {
   line-height: 2;
 }
 
+/* Title global */
+.title {
+  text-align: center;
+}
+
+/* Button global */
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -158,9 +164,8 @@ Cards
 ==================
 */
 
-.title {
-  text-align: center;
-}
+/* title global style */
+
 .cards {
   padding: 4rem 0;
 }
@@ -185,8 +190,8 @@ min width = (max width - (gap * columns-1)) / columns
 .card {
   border: 1px solid var(--darkGrey);
   margin-bottom: 3rem;
-  /* display: grid;
-  grid-template-rows: auto 1fr auto; */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .card-info {
@@ -200,4 +205,69 @@ min width = (max width - (gap * columns-1)) / columns
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   place-items: center;
+}
+
+/* 
+==================
+Tiles
+==================
+*/
+
+/* title from global */
+
+.tiles {
+  padding: 4rem 0;
+}
+
+.tiles-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(276px, 1fr));
+  gap: 2rem;
+}
+
+@media screen and (min-width: 1170px) {
+  .tiles-center {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 200px);
+    grid-template-areas:
+      "a a a b"
+      "a a a c"
+      "d d d d"
+      "e f f f"
+      "e g h i";
+  }
+  .tiles-center img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .tile-1 {
+    grid-area: a;
+  }
+  .tile-2 {
+    grid-area: b;
+  }
+  .tile-3 {
+    grid-area: c;
+  }
+  .tile-4 {
+    grid-area: d;
+  }
+  .tile-5 {
+    grid-area: e;
+  }
+  .tile-6 {
+    grid-area: f;
+  }
+  .tile-7 {
+    grid-area: g;
+  }
+  .tile-8 {
+    grid-area: h;
+  }
+  .tile-9 {
+    grid-area: i;
+  }
 }
